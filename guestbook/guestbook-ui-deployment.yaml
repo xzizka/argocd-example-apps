@@ -1,7 +1,14 @@
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: guestbook
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: guestbook-ui
+  namespace: guestbook
 spec:
   replicas: 1
   revisionHistoryLimit: 3
